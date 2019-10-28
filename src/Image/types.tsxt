@@ -1,0 +1,15 @@
+
+import styled from 'styled-components';
+ 
+export interface ImageProps {
+	alt?: string;
+	className?: string;
+	/** @asset */ src?: string;
+	size?: string;
+}
+
+export const StyledImage = styled.img`
+	display: block;
+	width: ${(props: ImageProps) => props.size || "100%"};
+	object-fit: cover;
+`;

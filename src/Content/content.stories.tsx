@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { HelloWorld } from './hello-world';
+import { Content } from './content';
 
 const stories = storiesOf('Components', module);
 
 stories.add(
-  'HelloWorld',
-  () => <HelloWorld />,
+  'Content',
+  () => <Content />,
   { info: { inline: true } }
 );

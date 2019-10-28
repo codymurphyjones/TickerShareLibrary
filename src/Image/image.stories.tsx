@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { TextStyleBlock } from './text-style-block';
+import { Image } from './image';
 
 const stories = storiesOf('Components', module);
 
 stories.add(
-  'TextStyleBlock',
-  () => <TextStyleBlock />,
+  'Image',
+  () => <Image />,
   { info: { inline: true } }
 );
