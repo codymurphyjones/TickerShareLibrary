@@ -1,7 +1,7 @@
 // src/hello-world.styled.ts
 import styled from 'styled-components';
 
-enum SectionBlockColors {
+export enum SectionBlockColors {
   Pale = 'palevioletred',
   Whip = 'papayawhip',
   Black = '#000000',
@@ -20,8 +20,8 @@ export interface SectionBlockProps {
 }
 
 export const StyledSectionBlock = styled.section<SectionBlockProps>`
-  padding: ${props => props.padding || '4em'};
+  padding: ${props => props.padding || 'auto'};
   font-family: sans-serif;
-  background: ${props => props.color || SectionBlockColors.Gold};
+  background: ${props => props.color || SectionBlockColors.Black};
   margin: ${props => props.margin || 'auto auto'};
 }`;

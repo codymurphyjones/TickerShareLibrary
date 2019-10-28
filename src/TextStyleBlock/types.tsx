@@ -23,7 +23,7 @@ export enum TextStyleBlockAlign {
 
 export const StyledTextStyleBlock = styled.div<TextStyleBlockProps>`
 	margin: 0;
-	font-family: ${props => props.font}
+	font-family: ${props => props.font || 'inherit'};
 	color: ${(props: TextStyleBlockProps) => props.color || 'inherit'};
 	line-height: 1.5;
 

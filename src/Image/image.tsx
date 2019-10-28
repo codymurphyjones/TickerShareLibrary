@@ -7,25 +7,25 @@ export interface ImageProps {
 	/** @asset */ src?: string;
 	width?: string;
 	maxwidth?: string;
-	fill?: boolean;
+	fillArea?: boolean;
 }
 
 
-const StyledImage = styled.img`
+const StyledImage = styled.img<ImageProps>`
 	display: block;
-	width: ${(props: ImageProps) => props.width || "100%"};
-	max-width: ${(props: ImageProps) => props.maxwidth || "100%"};
-	${props =>
-		props.maxwidth ? 'max-width:' + props.maxwidth : 'background-color: red;'};
+	width: ${(props: ImageProps) => props.width || "auto"};
 	
 	${props =>
-		props.fill ? 'object-fit: contain; width:100%': 'background-color: red;'};
+		props.maxwidth ? `max-width:`.concat(props.maxwidth) : ``};
+	
+	${props =>
+		props.fillArea ? `object-fit: contain; width:100%`: ``};
 	
 	margin: auto auto;
 `;
 
 export const Image: React.StatelessComponent<ImageProps> = (props): JSX.Element => {
 	return (
-		<StyledImage alt={props.alt} className={props.className} src={props.src} maxwidth={props.maxwidth}  />
+		<StyledImage fillArea={props.fillArea} alt={props.alt} className={props.className} width={props.width} src={props.src} maxwidth={props.maxwidth}  />
 	);
 };

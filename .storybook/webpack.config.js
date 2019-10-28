@@ -3,7 +3,7 @@ config.module.rules.push({
   test: /\.(ts|tsx)$/,
   use: [
     {
-      loader: require.resolve('awesome-typescript-loader'),
+      loader: require.resolve('awesome-typescript-loader?configFileName=tsconfig-web.json'),
     },
   ],
 });
