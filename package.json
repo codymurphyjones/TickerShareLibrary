@@ -10,7 +10,6 @@
     "build": "tsc -p tsconfig-web.json",
     "build-site": "next build",
     "dev": "next",
-    "postinstall": "tsc -p tsconfig-web.json"
   },
   "keywords": [],
   "author": "",
