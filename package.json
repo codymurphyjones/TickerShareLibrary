@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook",
     "build": "tsc -p tsconfig-web.json",
     "build-site": "next build",
-    "dev": "next",
+    "dev": "next"
   },
   "keywords": [],
   "author": "",
