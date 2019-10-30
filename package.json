@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook",
     "build": "tsc -p tsconfig-web.json",
     "postbuild": "next build",
-	"web": "next start -p $PORT",
+    "web": "node ./server.js $PORT",
     "dev": "next"
   },
   "keywords": [],
@@ -17,6 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "next": "^9.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
