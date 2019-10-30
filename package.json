@@ -8,7 +8,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "tsc -p tsconfig-web.json",
-    "build-site": "next build",
+    "postbuild": "next build",
+	"web": "next start -p $PORT",
     "dev": "next"
   },
   "keywords": [],
