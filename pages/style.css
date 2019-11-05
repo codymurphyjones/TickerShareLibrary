@@ -8,3 +8,11 @@ body {
 	margin: 0px;
 	font-family: Helvetica neue;
 }
+
+.footer a {
+	color: #fff;
+}
+
+.footer a:visited {
+	color: #fff;
+}

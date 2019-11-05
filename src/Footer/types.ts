@@ -15,26 +15,13 @@ enum FooterColors {
 export interface FooterProps {
   color?: FooterColors;
   fontColor?: FooterColors;
+  className?: string;
 }
 
-export interface FooterSectionProps {
-  maxWidth?: string;
-  center?: boolean;
-}
 
 export const StyledFooter = styled.section<FooterProps>`
   padding-top: 15px; 
   font-family: sans-serif;
   background: ${props => props.color || FooterColors.Charcoal};
   color: ${props => props.fontColor || FooterColors.White};
-}`;
-
-
-export const StyledFooterSection = styled.section<FooterSectionProps>`
-  display: inline-block; margin: auto auto;
-  ${props =>
-    props.maxWidth ? `max-width:`.concat(props.maxWidth) : ``};
-
-  ${props =>
-      props.center ? `text-align: center;` : ``};
 }`;
