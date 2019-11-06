@@ -29,7 +29,6 @@ export const StyledTextStyleBlock = styled.div<TextStyleBlockProps>`
 	line-height: 1.5;
 
 	font-size: ${props => props.size || '18px'}
-	margin: ${props => props.margin || '0px'}
 	
 	${props => {
 		switch (props.align) {

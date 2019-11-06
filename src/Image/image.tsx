@@ -8,6 +8,7 @@ export interface ImageProps {
 	width?: string;
 	maxwidth?: string;
 	fillArea?: boolean;
+	maxMobile?: boolean;
 }
 
 
@@ -17,9 +18,22 @@ const StyledImage = styled.img<ImageProps>`
 	
 	${props =>
 		props.maxwidth ? `max-width:`.concat(props.maxwidth) : ``};
-	
-	${props =>
-		props.fillArea ? `object-fit: contain; width:100%`: ``};
+		
+	@media screen and (max-width: ${props =>  {
+		if(props.fillArea)
+			return `99999px`;
+		
+		if(props.maxMobile)
+			return `600px`;
+		
+		return `0px`;
+			
+	}}) {
+			object-fit: contain; 
+			width:100%
+			max-width: 100%;
+			
+	}
 	
 	margin: auto auto;
 `;
