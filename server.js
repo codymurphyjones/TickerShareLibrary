@@ -11,6 +11,11 @@ app.prepare()
 .then(() => {
   const server = express()
   server.options('*', cors()) 
+  
+  server.get('*/:sent', (req, res) => {
+    return app.render(req, res, '/', { sent: req.params.sent })
+  })
+  
   server.get('*', (req, res) => {
     return handle(req, res)
   })
