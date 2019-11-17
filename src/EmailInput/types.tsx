@@ -1,8 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const { useEffect, useState } = React;
-
 
 export interface EmailInputProps {
 	/** @name CSS Class @ignore */ textboxPlaceholder?: string;
@@ -73,55 +71,10 @@ export const ShowContent = ({sent, children, textboxPlaceholder}: EmailInputProp
 
 export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 
-	//State Values
-	const [showButton, setShowButton] = useState(true);
-
-	const isInViewport = function (elem : HTMLElement) {
-		var bounding = elem.getBoundingClientRect();
 		return (
-			bounding.top >= 0 &&
-			bounding.left >= 0 &&
-			bounding.bottom  <= (window.innerHeight - (window.innerHeight * 0.20) || document.documentElement.clientHeight + (document.documentElement.clientHeight * 0.20)) &&
-			bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-		);
-	};
-
-		
-		useEffect( () => {
-
-			/*const isBottom = (el: HTMLElement) => {
-				return el.getBoundingClientRect().top <= window.innerHeight;
-			  }*/
-
-
-			const handler = () => {
-
-				const wrappedElement = document.getElementById('signup') as HTMLElement;
-				  
-				if (isInViewport(wrappedElement)) {
-					setShowButton(false);
-				}
-				else
-				{
-					setShowButton(true);
-				}
-
-			}
-
-		document.addEventListener('scroll', handler);
-  
-		return () => {
-	  	window.removeEventListener('scroll', handler);
-		}
-  	})
-
-
-
-		return (
-			<form action="#signup" method="get"
+			<div 
 			style={{
 				width: '100%',
-				visibility: showButton ? 'visible' : 'hidden',
 				height: 'auto',
 				maxWidth: '150px',
 				fontWeight: 'bold',
@@ -131,22 +84,27 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 			}} 
 			
 			>
-				 <input 
-					 style={{
+				 <a 
+			 		style={{
 						backgroundColor: 'rgb(46,168,252)',
 						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
 						borderRadius: '12px',
 						padding: '10px 10px',
 						border: 'none',
+						color: '#000',
 						width: '100%',
-						maxWidth: '150px',
+						maxWidth: '200px',
+						marginTop: '25px',
 						fontWeight: 'bold',
-						
+						display: 'inline-block',
+						fontSize: '14px',
+						textDecoration: 'none',
+						textAlign: 'center'
 
 					}} 
-					value={textboxPlaceholder}
-					type="submit" 
-				/>
-			</form>
+					href="#signup"
+						
+				>{textboxPlaceholder}</a>
+			</div>
 		);
 }

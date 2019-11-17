@@ -26,8 +26,8 @@ function OpenPrivacyPolicy() {
 function Home(props) {
 	
   return <Content>
-	  		<GetEarlyAccessButton textboxPlaceholder="Get early access" />
-			<SectionBlock padding="40px 10%" paddingsm="40px 0px 25px 0px">
+	  		<GetEarlyAccessButton textboxPlaceholder="Sign up now!" />
+			<SectionBlock padding="15px 10% 40px 10%" paddingsm="40px 0px 25px 0px">
 				<Image src="/assets/tickershare.png" maxwidth="60px" />
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="42px" bold>A new way to connect with investors</TextStyleBlock>
 				<TextStyleBlock margin="0px 0px 30px 0px" align={TextStyleBlockAlign.Middle} bold>Real users. Real audience</TextStyleBlock>
@@ -35,31 +35,18 @@ function Home(props) {
 				
 			</SectionBlock>
 			<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
-				<TextStyleBlock align={TextStyleBlockAlign.Middle} margin="0px auto" size="28px" bold>Tickershare is a whole new way to socially network with traders and investors.</TextStyleBlock>
-				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="25px 0px 0px 0px" bold>Get into the private beta and<br />secure your favorite @handle<br />
-				<a 
-			 		style={{
-						backgroundColor: 'rgb(46,168,252)',
-						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
-						borderRadius: '12px',
-						padding: '10px 10px',
-						border: 'none',
-						color: '#000',
-						width: '100%',
-						maxWidth: '200px',
-						marginTop: '25px',
-						fontWeight: 'bold',
-						display: 'inline-block',
-						fontSize: '13.3333px',
-						textDecoration: 'none'
+				<a id="signup" />
 
-					}} 
-					href="#signup"
-						
-				>Sign up now!</a>
+				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="0px 0px 0px 0px" bold>
+					<EmailInput sent={props.sent} action="https://usebasin.com/f/43a0ded73401" textboxPlaceholder="Get early access!">
+						<TextStyleBlock align={TextStyleBlockAlign.Middle} margin="0px auto" size="28px" bold>Tickershare is a whole new way to socially network with traders and investors.</TextStyleBlock>
+						<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="25px 0px 0px 0px" bold>Get into the private beta and<br />secure your favorite @handle<br />
+						</TextStyleBlock>
+					</EmailInput>
 				</TextStyleBlock>
-				
+
 			</SectionBlock>
+
 			<SectionBlock padding="60px 15% 60px 15%" paddingsm="40px 0px 40px 0px">
 				<TextStyleBlock size="32px" margin="0px 10%" bold>Real users. Verified.</TextStyleBlock>
 				<TextStyleBlock size="22px" color="#f6ac3e" margin="0px 10%" bold>With AI we ensure Tickershare remains a community where people use their real identities. <br />
@@ -67,15 +54,18 @@ function Home(props) {
 				</TextStyleBlock>
 				<Image src="/assets/uGIqYVXgxB8v1h2P4fLgyLd5k.png" maxwidth="40%" maxMobile />
 			</SectionBlock>
+
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px" color={SectionBlockColors.Royal}>
 				<TextStyleBlock size="32px" bold>Express yourself. Be an influencer.</TextStyleBlock>
 				<TextStyleBlock size="22px" color="#f6ac3e" bold>Tickershare is a real social network, express your opinion on tickers and the market, have an opportunity to build an audience and grow a following</TextStyleBlock>
 			</SectionBlock>
+
 			<SectionBlock padding="60px 10% 0px 10%" paddingsm="40px 10px 0px 10px" color={SectionBlockColors.White}>
 				<TextStyleBlock size="32px" color="#000" bold>Trending like never before.</TextStyleBlock>
 				<TextStyleBlock size="22px" color="#f6ac3e" margin="0px 0px 50px 0px" bold>Using AI and human curation, the trending page does not only show trending tickers, but also why they're trending, keeping you up to date with a quick glance.</TextStyleBlock>
 				<Image src="/assets/XFGbuvFUB257uH5KETwDR6ZAryA.png" maxwidth="40%" maxMobile />
 			</SectionBlock>
+
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px">
 			
 				<TextStyleBlock size="32px" bold>Intuitive. Easy to  use.</TextStyleBlock>
@@ -84,7 +74,8 @@ function Home(props) {
 				we believe it's one of the best looking social media apps.</TextStyleBlock>
 				<Image src="/assets/AzZ2r7i8nJO2CT8KTJu9361gj0.png" maxwidth="50%" maxMobile />
 			</SectionBlock>
-			<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
+
+			{/*<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
 				<a id="signup" />
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="0px 0px 0px 0px" bold>
 					<EmailInput sent={props.sent} action="https://usebasin.com/f/43a0ded73401" textboxPlaceholder="Get early access!">
@@ -97,7 +88,10 @@ function Home(props) {
 					</EmailInput>
 				</TextStyleBlock>
 				
-			</SectionBlock>
+				</SectionBlock>*/}
+
+			
+
 			<Footer padding="0px 0px 35px 0px">
 					<SectionBlock padding="30px 10% 0px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
 						<a target="popup" onClick={() => { OpenPrivacyPolicy(); return false; }}  href="/privacy.html">Privacy Policy</a><br />
