@@ -1,33 +1,49 @@
-
-
 import { Content } from '../src/Content';
 import { Image } from '../src/Image';
 import { TextStyleBlock, TextStyleBlockAlign } from '../src/TextStyleBlock';
 import { SectionBlock, SectionBlockColors } from '../src/SectionBlock';
 import { Link } from '../src/Link';
 import { Footer } from '../src/Footer';
-import { EmailInput } from '../src/EmailInput';
+import { EmailInput, GetEarlyAccessButton } from '../src/EmailInput';
+
+function OpenPrivacyPolicy() {
+
+	var child = window.open('','popup','width=600,height=600');
+
+	window.addEventListener("message", receiveMessage, false);
+
+	function receiveMessage(event) {
+		switch(event.data) {
+			case "CLOSEPOPUP":
+					child.close();
+				break;
+		}
+	}
+}
+
 
 
 function Home(props) {
 	
   return <Content>
+	  		<GetEarlyAccessButton textboxPlaceholder="Get early access" />
 			<SectionBlock padding="40px 10%" paddingsm="40px 0px 25px 0px">
 				<Image src="/assets/tickershare.png" maxwidth="60px" />
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="42px" bold>A new way to connect with investors</TextStyleBlock>
 				<TextStyleBlock margin="0px 0px 30px 0px" align={TextStyleBlockAlign.Middle} bold>Real users. Real audience</TextStyleBlock>
 				<Image src="/assets/N5GkXT0uTk7yS0R6mpEJJX6zyo.png" maxwidth="50%"  />
+				
 			</SectionBlock>
 			<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} margin="0px auto" size="28px" bold>Tickershare is a whole new way to socially network with traders and investors.</TextStyleBlock>
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="25px 0px 0px 0px" bold>Get into the private beta and<br />secure your favorite @handle<br />
 				<a 
 			 		style={{
-						backgroundColor: "#44b9fc",
-						borderRadius: '15px',
+						backgroundColor: 'rgb(46,168,252)',
+						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
+						borderRadius: '12px',
 						padding: '10px 10px',
-    					borderStyle: 'solid',
-						borderColor: '#000',
+						border: 'none',
 						color: '#000',
 						width: '100%',
 						maxWidth: '200px',
@@ -54,26 +70,6 @@ function Home(props) {
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px" color={SectionBlockColors.Royal}>
 				<TextStyleBlock size="32px" bold>Express yourself. Be an influencer.</TextStyleBlock>
 				<TextStyleBlock size="22px" color="#f6ac3e" bold>Tickershare is a real social network, express your opinion on tickers and the market, have an opportunity to build an audience and grow a following</TextStyleBlock>
-				<a 
-			 		style={{
-						backgroundColor: "#f6ac3e",
-						borderRadius: '15px',
-						padding: '10px 10px',
-						border: '3px solid #333',
-						color: '#000',
-						width: '100%',
-						maxWidth: '175px',
-						marginTop: '25px',
-						fontWeight: 'bold',
-						display: 'inline-block',
-						fontSize: '13.3333px',
-						textDecoration: 'none',
-						textAlign: 'center'
-						
-					}} 
-					href="#signup"
-						
-				>Join TickerShare today!</a>
 			</SectionBlock>
 			<SectionBlock padding="60px 10% 0px 10%" paddingsm="40px 10px 0px 10px" color={SectionBlockColors.White}>
 				<TextStyleBlock size="32px" color="#000" bold>Trending like never before.</TextStyleBlock>
@@ -104,7 +100,7 @@ function Home(props) {
 			</SectionBlock>
 			<Footer padding="0px 0px 35px 0px">
 					<SectionBlock padding="30px 10% 0px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
-						<a target="popup" onClick={() => { window.open('','popup','width=600,height=600'); return false; }}  href="/privacy.html">Privacy Policy</a><br />
+						<a target="popup" onClick={() => { OpenPrivacyPolicy(); return false; }}  href="/privacy.html">Privacy Policy</a><br />
 						{/*<Link href="http://google.com">Blog</Link>*/}
 					</SectionBlock>
 					

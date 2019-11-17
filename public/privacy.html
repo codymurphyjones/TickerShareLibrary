@@ -1,3 +1,15 @@
+<script type='text/javascript'>
+
+    var CloseChild = () => {
+        try {
+        window.opener.postMessage("CLOSEPOPUP", window.location);
+        }
+        catch {
+            alert("No parent");
+        }
+    }
+</script>
+
 <style type='text/css'>
 html, body { 
 margin: 0px;
@@ -171,4 +183,21 @@ a:visited {
         <li>By email: tickershare@gmail.com</li>
           
         </ul>
+<div style="text-align: center">
+    <input style="
+    background-color: rgb(46,168,252);
+    background: linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%);
+    border-radius: 12px;
+    padding: 10px 10px;
+    border: none;
+    color: #000;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 25px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 13.3333px;
+    text-decoration: none"
+    type="button" onclick="CloseChild()" value="Close" />
+</div>
 </body>
