@@ -40,7 +40,8 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 						width: '60%',
 						maxWidth: '500px',
 						marginRight: '20px',
-						marginTop: '10px'
+						marginTop: '10px',
+						fontFamily: 'Helvetica'
 					}}
 					placeholder={textboxPlaceholder}
 				/> 
@@ -54,7 +55,8 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 						border: 'none',
 						width: '100%',
 						maxWidth: '200px',
-						fontWeight: 'bold'
+						fontWeight: 'bold',
+						fontFamily: 'Helvetica'
 					}} 
 					value={CallToAction}
 					type="submit" 
@@ -140,7 +142,8 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 						display: 'inline-block',
 						fontSize: '14px',
 						textDecoration: 'none',
-						textAlign: 'center'
+						textAlign: 'center',
+						fontFamily: 'Helvetica'
 
 					}} 
 					href="#signup"
