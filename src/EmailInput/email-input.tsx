@@ -50,7 +50,7 @@ export class EmailInput extends React.Component<EmailInputProps> {
 	return (
 		
 		<StyledEmailInput method="POST" {...this.props}>
-			{sentValue()}
+				{sentValue()}
 		</StyledEmailInput>
 	);
 	}
