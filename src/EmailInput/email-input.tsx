@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { StyledEmailInput, EmailInputProps } from './types'
+import React from 'react';
+import { StyledEmailInput, EmailInputProps, ShowContent } from './types'
 
 /*
 
@@ -7,70 +7,12 @@ https://manage.auth0.com/dashboard/us/tickershare/applications/ULW9Lda9mdm8bWMfc
 
 */
 
-
-/**
- * @icon Type
- */
-export class EmailInput extends React.Component<EmailInputProps> {
-	
-	render() {
-	let sentValue = () => {
-		if(!this.props.sent) {
-
-		return (
-		<>
-			{this.props.children}
-			<br />
-			<input
-				name="email" type="textbox"
-				style={{
-					backgroundColor: "#FFF",
-					padding: '10px 10px',
-					borderRadius: '5px',
-    				borderStyle: 'groove',
-					borderColor: '#000',
-					width: '60%',
-					maxWidth: '600px',
-					marginRight: '20px',
-					marginTop: '10px'
-				}}
-			/> 
-			 
-			 <input 
-			 	style={{
-					backgroundColor: "#44b9fc",
-					borderRadius: '15px',
-					padding: '10px 10px',
-    				borderStyle: 'groove',
-					borderColor: '#000',
-					width: '100%',
-					maxWidth: '200px',
-					fontWeight: 'bold'
-				}} 
-				value="Get early access!" 
-				type="submit" 
-				/>
-		</>
-				);
-	}
-
-	return (
-		<span style={{fontSize: '35px'}}>
-			Thank you for signing up wth TickerShare
-			<br /><br />
-			We will send an email when the account system has been opened up for registrations.
-		</span>
-	)
-	
-	}
+export const EmailInput = (props: EmailInputProps) => {
 	return (
 		
-		<StyledEmailInput method="POST" {...this.props}>
-				{sentValue()}
+		<StyledEmailInput method="POST">
+				{ShowContent(props)}
 		</StyledEmailInput>
 	);
-	}
-};
-
-
+}
     
