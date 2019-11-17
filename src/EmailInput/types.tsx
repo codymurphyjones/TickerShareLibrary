@@ -83,8 +83,10 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 	var isInViewport = function (elem: HTMLElement) {
 		var bounding = elem.getBoundingClientRect();
 		return (
-			bounding.top >= 0 &&
-			bounding.bottom <= (window.innerHeight / 2 || document.documentElement.clientHeight / 2)
+			bounding.top >= -175 &&
+			bounding.left >= 0 &&
+			bounding.bottom + 200 <= (window.innerHeight || document.documentElement.clientHeight) &&
+			bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
 		);
 	};
 
