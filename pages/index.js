@@ -56,15 +56,16 @@ function Home(props) {
 				<form action="#signup">
 					<input 
 			 			style={{
-							backgroundColor: "#44b9fc",
+							backgroundColor: "#fff",
 							borderRadius: '15px',
 							padding: '10px 10px',
     						borderStyle: 'groove',
-							borderColor: '#000',
+							borderColor: '#f6ac3e',
 							width: '100%',
 							maxWidth: '200px',
 							marginTop: '25px',
-							fontWeight: 'bold'
+							fontWeight: 'bold',
+							color: '#f6ac3e'
 						}} 
 						value="Join TickerShare today!" 
 						type="submit" 
@@ -98,10 +99,10 @@ function Home(props) {
 			</SectionBlock>
 			<Footer padding="0px 0px 35px 0px">
 					<SectionBlock padding="30px 10% 0px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
-						<Link href="http://google.com">Privacy Policy</Link><br />
-						<Link href="http://google.com">Blog</Link>
+						<a target="popup" onClick={() => { window.open('','popup','width=600,height=600'); return false; }}  href="/privacy.html">Privacy Policy</a><br />
+						{/*<Link href="http://google.com">Blog</Link>*/}
 					</SectionBlock>
-
+					
 					<SectionBlock padding="30px 10% 25px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
 						TickerShare, Inc. All rights reserved
 					</SectionBlock>
