@@ -80,7 +80,7 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 				fontWeight: 'bold',
 				position: 'fixed',
 				top: '10px',
-				right: '4%'
+				right: '6%'
 			}} 
 			
 			>
