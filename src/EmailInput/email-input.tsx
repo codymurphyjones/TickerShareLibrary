@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { StyledEmailInput, EmailInputProps } from './types'
 
+/*
+
+https://manage.auth0.com/dashboard/us/tickershare/applications/ULW9Lda9mdm8bWMfcBS8SOUSKUY_QFqn/quickstart
+
+*/
+
 
 /**
  * @icon Type
@@ -36,8 +42,9 @@ export class EmailInput extends React.Component<EmailInputProps> {
 					borderColor: '#000',
 					width: '100%',
 					maxWidth: '200px',
+					fontWeight: 'bold'
 				}} 
-				value="Get early access" 
+				value="Get early access!" 
 				type="submit" 
 				/>
 		</>

@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/.next": true,
+        "**/.vscode": true,
+        "**/*.d.ts": true,
+        "**/lib": true,
+        "**/node_modules": true
+    }
+}
