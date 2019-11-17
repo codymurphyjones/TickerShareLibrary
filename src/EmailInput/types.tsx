@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 export interface EmailInputProps {
 	/** @name CSS Class @ignore */ textboxPlaceholder?: string;
+	/** @name CallToAction @ignore */ CallToAction?: string;
 	/** @name Font Size @default 18px */ size?: string;
 	/** @name margin */ color?: string;
 	/** @name sent */ sent?: boolean;
@@ -19,7 +20,7 @@ Render Function: ShowContent
 Determines whether to show the entry form or the thank you text
 */
 
-export const ShowContent = ({sent, children, textboxPlaceholder}: EmailInputProps) => {
+export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: EmailInputProps) => {
 	if(!sent) {
 		return (
 			<>
@@ -30,28 +31,29 @@ export const ShowContent = ({sent, children, textboxPlaceholder}: EmailInputProp
 					style={{
 						backgroundColor: "#FFF",
 						padding: '10px 10px',
-						borderRadius: '5px',
+						borderRadius: '10px',
 						borderStyle: 'solid',
 						borderColor: '#000',
 						width: '60%',
-						maxWidth: '600px',
+						maxWidth: '500px',
 						marginRight: '20px',
 						marginTop: '10px'
 					}}
+					placeholder={textboxPlaceholder}
 				/> 
 		 
 				 <input 
 					 style={{
 						backgroundColor: 'rgb(46,168,252)',
 						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
-						borderRadius: '12px',
+						borderRadius: '10px',
 						padding: '10px 10px',
 						border: 'none',
 						width: '100%',
 						maxWidth: '200px',
 						fontWeight: 'bold'
 					}} 
-					value={textboxPlaceholder}
+					value={CallToAction}
 					type="submit" 
 				/>
 			</>
