@@ -6,11 +6,12 @@ const port = process.argv[2].replace("$PORT", "3000");;
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-    
 app.prepare()
 .then(() => {
   const server = express()
   server.options('*', cors()) 
+  
+  server.use(express.static('public'))
   
   server.get('*/:sent', (req, res) => {
     return app.render(req, res, '/', { sent: req.params.sent })
