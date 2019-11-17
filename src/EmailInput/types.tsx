@@ -7,6 +7,7 @@ import styled from 'styled-components';
 	/** @name Font Size @default 18px */ size?: string;
 	/** @name margin */ color?: string;
 	/** @name sent */ sent?: boolean;
+	children?: React.ReactNode;
 	
 }
 

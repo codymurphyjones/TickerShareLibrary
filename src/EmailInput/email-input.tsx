@@ -19,6 +19,8 @@ export class EmailInput extends React.Component<EmailInputProps> {
 
 		return (
 		<>
+			{this.props.children}
+			<br />
 			<input
 				name="email" type="textbox"
 				style={{
@@ -29,7 +31,8 @@ export class EmailInput extends React.Component<EmailInputProps> {
 					borderColor: '#000',
 					width: '60%',
 					maxWidth: '600px',
-					marginRight: '20px'
+					marginRight: '20px',
+					marginTop: '10px'
 				}}
 			/> 
 			 
@@ -51,7 +54,13 @@ export class EmailInput extends React.Component<EmailInputProps> {
 				);
 	}
 
-	return (<span style={{fontSize: '35px'}}>Thank you for signing up wth TickerShare</span>)
+	return (
+		<span style={{fontSize: '35px'}}>
+			Thank you for signing up wth TickerShare
+			<br /><br />
+			We will send an email when the account system has been opened up for registrations.
+		</span>
+	)
 	
 	}
 	return (
