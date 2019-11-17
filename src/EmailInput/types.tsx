@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+const {useState, useEffect} = React;
+
 
 export interface EmailInputProps {
 	/** @name CSS Class @ignore */ textboxPlaceholder?: string;
@@ -8,6 +10,7 @@ export interface EmailInputProps {
 	/** @name Font Size @default 18px */ size?: string;
 	/** @name margin */ color?: string;
 	/** @name sent */ sent?: boolean;
+	/** @name name */ id?: string;
 	children?: React.ReactNode;
 }
 
@@ -73,6 +76,41 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 
 export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 
+	const [showButton, setShowButton] = useState(true);
+
+	var isInViewport = function (elem: HTMLElement) {
+		var bounding = elem.getBoundingClientRect();
+		return (
+			bounding.top >= 0 &&
+			bounding.bottom <= (window.innerHeight / 2 || document.documentElement.clientHeight / 2)
+		);
+	};
+
+
+	useEffect(() => {
+		function handle() {
+			const element = document.getElementById("inputsection") as HTMLElement;
+
+			if(isInViewport(element)) {
+				setShowButton(false);
+			}
+			else
+			{
+				setShowButton(true);
+			}
+		  
+		}
+	
+		window.addEventListener('scroll', handle);
+		// Specify how to clean up after this effect:
+		return () => {
+			window.removeEventListener('scroll', handle);
+		};
+	  });
+	
+
+	
+
 		return (
 			<div 
 			style={{
@@ -82,7 +120,8 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 				fontWeight: 'bold',
 				position: 'fixed',
 				top: '10px',
-				right: '6%'
+				right: '6%',
+				visibility: showButton ? "visible" : "hidden"
 			}} 
 			
 			>
