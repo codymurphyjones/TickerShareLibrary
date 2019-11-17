@@ -9,7 +9,6 @@ export class EmailInput extends React.Component<EmailInputProps> {
 	
 	render() {
 	let sentValue = () => {
-		console.log("I exist and I happen")
 		if(!this.props.sent) {
 
 		return (
@@ -45,7 +44,7 @@ export class EmailInput extends React.Component<EmailInputProps> {
 				);
 	}
 
-	return (<span>Thank you for signing up for TickerShare</span>)
+	return (<span style={{fontSize: '35px'}}>Thank you for signing up wth TickerShare</span>)
 	
 	}
 	return (

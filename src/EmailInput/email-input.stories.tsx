@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { TextStyleBlock } from './text-style-block';
+import { EmailInput } from './email-input';
 
 const stories = storiesOf('Components', module);
 
 stories.add(
-  'TextStyleBlock',
-  () => <TextStyleBlock />,
+  'EmailInput',
+  () => <EmailInput />,
   { info: { inline: true } }
 );
