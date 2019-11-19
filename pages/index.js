@@ -92,7 +92,7 @@ function Home(props) {
 
 			
 
-			<Footer padding="0px 0px 35px 0px">
+			<Footer padding="0px 0px 15px 0px">
 					<SectionBlock padding="30px 10% 0px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
 						<a color="#8C8C8C" target="popup" onClick={() => { OpenPrivacyPolicy(); return false; }}  href="/privacy.html">Privacy Policy</a><br />
 						{/*<Link href="http://google.com">Blog</Link>*/}

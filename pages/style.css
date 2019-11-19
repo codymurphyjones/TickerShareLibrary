@@ -9,16 +9,16 @@ body {
 	font-family: Helvetica neue;
 }
 
-.footer a {
-	color: #fff;
+.footer a, .footer {
+	color: #8C8C8C;
 	text-decoration: none;
 }
 
 .footer a:visited {
-	color: #fff;
+	color: #8C8C8C;
 }
 
 .footer a:hover {
-	color: #fff;
+	color: #8C8C8C;
 	text-decoration: underline;
 }
