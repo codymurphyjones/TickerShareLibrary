@@ -63,7 +63,7 @@ function Home(props) {
 			<SectionBlock padding="60px 10% 0px 10%" paddingsm="40px 10px 0px 10px" color={SectionBlockColors.White}>
 				<TextStyleBlock size="32px" color="#000" bold>Trending like never before.</TextStyleBlock>
 				<TextStyleBlock size="22px" color="#f6ac3e" margin="0px 0px 50px 0px" bold>Using AI and human curation, the trending page does not only show trending tickers, but also why they're trending, keeping you up to date with a quick glance.</TextStyleBlock>
-				<Image src="/assets/XFGbuvFUB257uH5KETwDR6ZAryA.png" maxwidth="40%" maxMobile />
+				<Image src="/assets/XFGbuvFUB257uH5KETwDR6ZAryA.png" maxwidth="30%" maxMobileWidth="50%" maxMobile />
 			</SectionBlock>
 
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px">
