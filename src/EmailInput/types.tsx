@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import useWindow from './usewindow';
+
+import useStyles from './styles';
+import useWindow from '../hooks/usewindow';
 
 const {useState, useEffect} = React;
 
@@ -26,57 +28,27 @@ Determines whether to show the entry form or the thank you text
 */
 
 export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: EmailInputProps) => {
-	
 	const { windowWidth } = useWindow();
-	
-	if(windowWidth > 0) {
-		console.log(windowWidth);
-	}
-	
+
 	if(!sent) {
-			
-		let styleVal = {
-				display: (windowWidth > 680) ? 'flex' : 'block',
-				justifyContent: 'space-around',
-				maxWidth: (windowWidth > 680) ? '800px' : '550px',
-				margin: 'auto'}
 			
 		return (
 			<>
 				{children}
 				<br />
-				<div style={styleVal}>
+				<div style={useStyles.showContentFrame(windowWidth)}>
 				<input
 					name="email" type="textbox"
-					style={{
-						backgroundColor: "#FFF",
-						padding: '10px 10px',
-						borderRadius: '10px',
-						borderStyle: 'solid',
-						borderColor: '#000',
-						width: '60%',
-						maxWidth: '500px',
-						marginTop: '10px',
-						fontFamily: 'Helvetica'
-					}}
+					style={useStyles.showContentTextBox()}
 					placeholder={textboxPlaceholder}
 				/> 
 		 
 				 <input 
-					 style={{
-						backgroundColor: 'rgb(46,168,252)',
-						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
-						borderRadius: '10px',
-						padding: '10px 10px',
-						border: 'none',
-						width: '100%',
-						maxWidth: '200px',
-						fontWeight: 'bold',
-						fontFamily: 'Helvetica'
-					}} 
+					style={useStyles.showContentSubmit()}
 					value={CallToAction}
 					type="submit" 
 				/>
+				
 				</div>
 			</>
 		);
@@ -96,7 +68,6 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 
 	const [showButton, setShowButton] = useState(true);
-	
 	const { windowWidth } = useWindow();
 
 	var isInViewport = function (elem: HTMLElement) {
@@ -132,44 +103,15 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 	  });
 	
 
-	
+	  
 
 		return (
 			<div 
-			style={{
-				width: '100%',
-				height: 'auto',
-				maxWidth: (windowWidth > 500) ? '150px' : '100px',
-				fontWeight: 'bold',
-				position: 'fixed',
-				top: '10px',
-				right: '6%',
-				visibility: showButton ? "visible" : "hidden"
-			}} 
-			
-			>
-				 <a 
-			 		style={{
-						backgroundColor: 'rgb(46,168,252)',
-						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
-						borderRadius: '12px',
-						padding: '10px 10px',
-						border: 'none',
-						color: '#000',
-						width: '100%',
-						maxWidth: '200px',
-						marginTop: '25px',
-						fontWeight: 'bold',
-						display: 'inline-block',
-						fontSize: '14px',
-						textDecoration: 'none',
-						textAlign: 'center',
-						fontFamily: 'Helvetica'
-
-					}} 
-					href="#signup"
-						
-				>{textboxPlaceholder}</a>
+			style={useStyles.earlyAccessFrame(showButton, windowWidth)} >
+				<a style={useStyles.earlyAccessButton()} 
+					href="#signup">
+						{textboxPlaceholder}
+				</a>
 			</div>
 		);
 }

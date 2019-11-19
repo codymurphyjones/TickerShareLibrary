@@ -9,6 +9,7 @@ export interface ImageProps {
 	maxwidth?: string;
 	fillArea?: boolean;
 	maxMobile?: boolean;
+	maxMobileWidth?: string;
 }
 
 
@@ -31,7 +32,7 @@ const StyledImage = styled.img<ImageProps>`
 	}}) {
 			object-fit: contain; 
 			width:100%
-			max-width: 100%;
+			max-width: ${(props: ImageProps) => props.maxMobileWidth || "100%"};
 			
 	}
 	
@@ -40,6 +41,6 @@ const StyledImage = styled.img<ImageProps>`
 
 export const Image: React.StatelessComponent<ImageProps> = (props): JSX.Element => {
 	return (
-		<StyledImage fillArea={props.fillArea} alt={props.alt} className={props.className} width={props.width} src={props.src} maxwidth={props.maxwidth}  />
+		<StyledImage maxMobileWidth={props.maxMobileWidth} maxMobile={props.maxMobile} fillArea={props.fillArea} alt={props.alt} className={props.className} width={props.width} src={props.src} maxwidth={props.maxwidth}  />
 	);
 };
