@@ -98,7 +98,7 @@ function Home(props) {
 						{/*<Link href="http://google.com">Blog</Link>*/}
 					</SectionBlock>
 					
-					<SectionBlock padding="30px 10% 25px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
+					<SectionBlock padding="30px 10% 5px 10%" paddingsm="30px 10px 0px 10px" color={SectionBlockColors.Charcoal} center>
 						<span color="#8C8C8C">TickerShare, Inc. All rights reserved</span>
 					</SectionBlock>
 					
