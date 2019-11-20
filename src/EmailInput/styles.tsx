@@ -39,11 +39,12 @@ function showContentTextBox() {
   return styleVal;
 }
 
-function showContentSubmit() {
+function showContentSubmit(windowWidth: number) {
 
   let styleVal: React.CSSProperties = {
 					backgroundColor: 'rgb(46,168,252)',
 					background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
+					margin: (windowWidth > 680) ? '10px 0px 0px 0px' : '0px',
 					borderRadius: '10px',
 					padding: '10px 10px',
 					border: 'none',

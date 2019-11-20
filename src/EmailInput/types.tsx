@@ -44,7 +44,7 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 				/> 
 		 
 				 <input 
-					style={useStyles.showContentSubmit()}
+					style={useStyles.showContentSubmit(windowWidth)}
 					value={CallToAction}
 					type="submit" 
 				/>
