@@ -15,6 +15,7 @@ export interface EmailInputProps {
 	/** @name margin */ color?: string;
 	/** @name sent */ sent?: boolean;
 	/** @name name */ id?: string;
+	/** @name actionUrl */action?: string;
 	children?: React.ReactNode;
 }
 
