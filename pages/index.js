@@ -28,7 +28,7 @@ function Home(props) {
   return <Content>
 	  		<GetEarlyAccessButton textboxPlaceholder="Sign up now" />
 			<SectionBlock padding="15px 10% 40px 10%" paddingsm="40px 0px 25px 0px">
-				<Image src="/assets/tickershare.png" maxwidth="60px" />
+				<Image src="/assets/tickershare.png" maxwidth="48px" />
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="42px" bold>A new way to connect with investors</TextStyleBlock>
 				<TextStyleBlock margin="0px 0px 30px 0px" align={TextStyleBlockAlign.Middle} bold>Real users. Real audience</TextStyleBlock>
 				<Image src="/assets/N5GkXT0uTk7yS0R6mpEJJX6zyo.png" maxwidth="50%" maxMobileWidth="95%" maxMobile  />
