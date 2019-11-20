@@ -72,7 +72,6 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 	)
 }
 
-
 export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EmailInputProps) => {
 
 	const [showButton, setShowButton] = useState(true);
