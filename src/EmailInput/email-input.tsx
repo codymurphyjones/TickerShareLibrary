@@ -10,7 +10,7 @@ https://manage.auth0.com/dashboard/us/tickershare/applications/ULW9Lda9mdm8bWMfc
 export const EmailInput = (props: EmailInputProps) => {
 	return (
 		
-		<StyledEmailInput id={props.id} method="POST">
+		<StyledEmailInput action={props.action} id={props.id} method="POST">
 				{ShowContent(props)}
 		</StyledEmailInput>
 	);
