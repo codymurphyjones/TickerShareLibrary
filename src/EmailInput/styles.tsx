@@ -51,7 +51,8 @@ function showContentSubmit(windowWidth: number) {
 					width: '100%',
 					maxWidth: '200px',
 					fontWeight: 'bold',
-					fontFamily: 'Helvetica'
+					fontFamily: 'Helvetica',
+					textAlign: 'center'
 				}
   return styleVal;
 }

@@ -1,9 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-
 import useStyles from './styles';
 import useWindow from '../hooks/usewindow';
+
+import { 
+	IoIosCheckmarkCircleOutline
+
+} from "react-icons/io";
 
 const {useState, useEffect} = React;
 
@@ -49,21 +53,24 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 					value={CallToAction}
 					type="submit" 
 				/>
-				
 				</div>
 			</>
 		);
 	}
 
 	return (
-		<span style={{fontSize: '35px'}}>
+		<span style={{fontSize: '25px'}}>
 			Thank you for signing up wth TickerShare
-			<br /><br />
+			<br />
+			<button type="submit" onClick={(e) => { e.preventDefault();}} style={useStyles.showContentSubmit(windowWidth)}>
+				<IoIosCheckmarkCircleOutline style={{display: "inline-block", verticalAlign: 'middle' }} size="2em" /> 
+				<span style={{marginLeft: "5px"}}>Invite Requested</span>
+			</button><br />
+			<br />
 			We will send an email when the account system has been opened up for registrations.
 		</span>
 	)
 }
-
 
 
 export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
