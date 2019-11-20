@@ -26,7 +26,7 @@ function OpenPrivacyPolicy() {
 function Home(props) {
 	
   return <Content>
-	  		<GetEarlyAccessButton textboxPlaceholder="Sign up now" />
+	  		<GetEarlyAccessButton sent={props.sent} textboxPlaceholder="Sign up now" />
 			<SectionBlock padding="15px 10% 40px 10%" paddingsm="10px 0px 25px 0px">
 				<Image src="/assets/tickershare.png" maxwidth="48px" margin="auto auto 20px auto" />
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="42px" bold>A new way to connect with investors</TextStyleBlock>

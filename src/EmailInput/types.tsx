@@ -73,7 +73,7 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 }
 
 
-export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
+export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EmailInputProps) => {
 
 	const [showButton, setShowButton] = useState(true);
 	const { windowWidth } = useWindow();
@@ -92,8 +92,10 @@ export const GetEarlyAccessButton = ({textboxPlaceholder}: EmailInputProps) => {
 	useEffect(() => {
 		function handle() {
 			const element = document.getElementById("inputsection") as HTMLElement;
+			
 
-			if(isInViewport(element)) {
+			if(isInViewport(element) || sent) {
+				console.log(sent);
 				setShowButton(false);
 			}
 			else
