@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {useSpring, animated } from 'react-spring'
 import useStyles from './styles';
 import useWindow from '../hooks/usewindow';
+import { Image } from '../Image';
 
 import fetch, {
     Response
@@ -150,15 +151,15 @@ export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: Email
 	}
 
 	return (
-		<span style={{fontSize: '25px'}}>
-			Thank you for signing up wth TickerShare
+		<span style={{fontSize: '18px', color: '#fff'}}>
+			<Image src="/assets/tickershare_transparent.png" maxwidth="64px" margin="auto auto 20px auto" />
 			<br />
 			<button type="submit" onClick={(e) => { e.preventDefault();}} style={useStyles.showContentSubmit(windowWidth)}>
 				<IoIosCheckmarkCircleOutline style={{display: "inline-block", verticalAlign: 'middle' }} size="2em" /> 
 				<span style={{marginLeft: "5px"}}>Invite Requested</span>
 			</button><br />
 			<br />
-			We will send an email when the account system has been opened up for registrations.
+			You will receive an email when your invite is ready
 		</span>
 	)
 }
