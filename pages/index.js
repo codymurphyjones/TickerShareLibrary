@@ -38,7 +38,7 @@ function Home(props) {
 				<a style={{top: '-150px', position: 'relative'}} id="signup" />
 				
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="0px 0px 0px 0px" bold>
-					<EmailInput id="inputsection" sent={props.sent} action="https://usebasin.com/f/43a0ded73401" textboxPlaceholder="Your best email" CallToAction="Get early access">
+					<EmailInput id="inputsection" sent={props.sent ? true : false} action="https://usebasin.com/f/43a0ded73401" textboxPlaceholder="Your best email" CallToAction="Get early access">
 						<TextStyleBlock align={TextStyleBlockAlign.Middle} color={SectionBlockColors.White} margin="0px auto" size="28px" bold>Tickershare is a whole new way to socially network with traders and investors.</TextStyleBlock>
 						<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="25px 0px 0px 0px" bold>Get into the private beta and<br />secure your favorite @handle<br />
 						</TextStyleBlock>

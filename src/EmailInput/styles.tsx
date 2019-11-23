@@ -6,8 +6,32 @@ const useStyles = {
 	earlyAccessFrame: earlyAccessFrame,
 	showContentSubmit: showContentSubmit,
 	showContentTextBox: showContentTextBox,
-	showContentFrame: showContentFrame
+	showContentFrame: showContentFrame,
+	showLoadingFrame: showLoadingFrame,
+	showLoadingIcon: showLoadingIcon
+}
 
+    
+	
+function showLoadingFrame() {
+ 
+  let styleVal: React.CSSProperties = {
+		display: 'block',margin: 
+		'auto auto', 
+		border: '3px solid #44bbff', 
+		backgroundColor: 'rgba(0,0,0,.6)' 
+	}
+
+  return styleVal;
+}
+
+function showLoadingIcon() {
+ 
+  let styleVal: React.CSSProperties = {
+				margin: 'auto auto'
+				}
+
+  return styleVal;
 }
 
 
@@ -42,17 +66,18 @@ function showContentTextBox() {
 function showContentSubmit(windowWidth: number) {
 
   let styleVal: React.CSSProperties = {
-					backgroundColor: 'rgb(46,168,252)',
-					background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
 					margin: (windowWidth > 680) ? '10px 0px 2px 0px' : '0px',
 					borderRadius: '10px',
 					padding: '10px 10px',
-					border: 'none',
+					backgroundColor: '#000',
+					border: '2px solid #44bbff',
+					color: '#bbbbbb',
 					width: '100%',
 					maxWidth: '200px',
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica',
 					textAlign: 'center'
+					
 				}
   return styleVal;
 }
@@ -76,12 +101,11 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 function earlyAccessButton() {
   
   let styleVal: React.CSSProperties = {
-						backgroundColor: 'rgb(46,168,252)',
-						background: 'linear-gradient(180deg, rgba(46,168,252,1) 0%, rgba(138,239,254,1) 80%)',
+						backgroundColor: '#000',
+						border: '2px solid #44bbff',
+						color: '#bbbbbb',
 						borderRadius: '12px',
 						padding: '10px 10px',
-						border: 'none',
-						color: '#000',
 						width: '100%',
 						maxWidth: '200px',
 						marginTop: '25px',

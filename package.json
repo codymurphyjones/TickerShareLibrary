@@ -16,13 +16,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node-fetch": "^2.5.4",
     "@zeit/next-css": "^1.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "next": "^9.1.1",
+    "node-fetch": "^2.6.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-icons": "^3.8.0",
+    "react-spring": "^8.0.27",
     "styled-components": "4.1.2",
     "webpack": "^4.41.2"
   },
