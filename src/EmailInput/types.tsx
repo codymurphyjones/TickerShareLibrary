@@ -23,11 +23,18 @@ export interface EmailInputProps {
 	/** @name CallToAction @ignore */ CallToAction?: string;
 	/** @name Font Size @default 18px */ size?: string;
 	/** @name margin */ color?: string;
-	/** @name sent */ sent?: boolean;
-	/** @name sent */ loading?: boolean;
 	/** @name name */ id?: string;
 	/** @name actionUrl */action?: string;
 	children?: React.ReactNode;
+}
+
+export interface EarlyAccessButtonProps {
+	/** @name Font Size @default 18px */ textboxPlaceholder?: string;
+	/** @name margin */ sent?: boolean;
+}
+
+export interface LoadingAnimationProps {
+	/** @name loading */ loading?: boolean;
 }
 
 
@@ -40,7 +47,7 @@ function submitEmail(email:string,callback:()=>void) {
 	fetch('https://usebasin.com/f/43a0ded73401.json', {
         method: 'post',
         body:    JSON.stringify({email:email}),
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     })
     .then((res:Response) => res.json())
     .then(json => { console.log(json); callback()});
@@ -55,7 +62,7 @@ Determines whether to show the entry form or the thank you text
 */
 
 
-function FetchLoading({loading}: EmailInputProps) {
+function FetchLoading({loading}: LoadingAnimationProps) {
 	const [resetOrbit, setResetOrbit] = useState(false);
 	
 	let animationData = {	}
@@ -93,12 +100,19 @@ function FetchLoading({loading}: EmailInputProps) {
 				)
 }
 
-export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: EmailInputProps) => {
+export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: EmailInputProps) => {
 	const { windowWidth } = useWindow();
+	const [formSent, setformSent] = useState(false);
+	const [email, setEmail] = useState("");
+	
+	const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+        const {value} = e.currentTarget;
+        setEmail(value);
+    }
 	
 	const [isLoading, setIsLoading] = useState(false);
 
-	if(!sent) {
+	if(!formSent) {
 			
 		return (
 			<>
@@ -109,6 +123,8 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 						name="email" type="textbox"
 						style={useStyles.showContentTextBox()}
 						placeholder={textboxPlaceholder}
+						value={email}
+						onChange={handleInputChange}
 					/> 
 		 
 					<input 
@@ -118,14 +134,16 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 						onClick={(e) => {	
 								setIsLoading(true);
 								e.preventDefault();
-								submitEmail("mager1794@live.com",() => { 
-										//setIsLoading(false);
+								submitEmail(email,() => { 
+										setIsLoading(false);
+										setformSent(true);
 									}
 								);			
 							}}
 					/>
 					<FetchLoading loading={isLoading} />
 				</div>
+				<GetEarlyAccessButton sent={formSent} textboxPlaceholder="Sign up now" />
 				
 			</>
 		);
@@ -145,7 +163,7 @@ export const ShowContent = ({sent, children, textboxPlaceholder, CallToAction}: 
 	)
 }
 
-export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EmailInputProps) => {
+export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EarlyAccessButtonProps) => {
 
 	const [showButton, setShowButton] = useState(true);
 	const { windowWidth } = useWindow();

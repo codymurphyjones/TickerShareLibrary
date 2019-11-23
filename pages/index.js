@@ -26,7 +26,7 @@ function OpenPrivacyPolicy() {
 function Home(props) {
 	
   return <Content>
-	  		<GetEarlyAccessButton sent={props.sent} textboxPlaceholder="Sign up now" />
+	  		
 			<SectionBlock padding="15px 10% 40px 10%" paddingsm="10px 0px 25px 0px">
 				<Image src="/assets/tickershare.png" maxwidth="48px" margin="auto auto 20px auto" />
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="42px" bold>A new way to connect with investors</TextStyleBlock>
@@ -34,6 +34,7 @@ function Home(props) {
 				<Image src="/assets/N5GkXT0uTk7yS0R6mpEJJX6zyo.png" maxwidth="50%" maxMobileWidth="95%" maxMobile  />
 				
 			</SectionBlock>
+			
 			<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
 				<a style={{top: '-150px', position: 'relative'}} id="signup" />
 				
@@ -42,6 +43,7 @@ function Home(props) {
 						<TextStyleBlock align={TextStyleBlockAlign.Middle} color={SectionBlockColors.White} margin="0px auto" size="28px" bold>Tickershare is a whole new way to socially network with traders and investors.</TextStyleBlock>
 						<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="25px 0px 0px 0px" bold>Get into the private beta and<br />secure your favorite @handle<br />
 						</TextStyleBlock>
+						<GetEarlyAccessButton sent={props.sent} textboxPlaceholder="Sign up now" />
 					</EmailInput>
 				</TextStyleBlock>
 
@@ -54,7 +56,7 @@ function Home(props) {
 				</TextStyleBlock>
 				<Image src="/assets/uGIqYVXgxB8v1h2P4fLgyLd5k.png" maxwidth="30%" maxMobileWidth="50%" maxMobile />
 			</SectionBlock>
-
+			
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px" color={SectionBlockColors.Royal}>
 				<TextStyleBlock size="32px" bold>Express yourself. Be an influencer.</TextStyleBlock>
 				<TextStyleBlock size="22px" color="#f6ac3e" bold>Tickershare is a real social network, express your opinion on tickers and the market, have an opportunity to build an audience and grow a following</TextStyleBlock>
