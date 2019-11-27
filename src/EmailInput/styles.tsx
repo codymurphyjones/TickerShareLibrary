@@ -16,10 +16,8 @@ const useStyles = {
 function showLoadingFrame() {
  
   let styleVal: React.CSSProperties = {
-		display: 'block',margin: 
-		'auto auto', 
-		border: '3px solid #44bbff', 
-		backgroundColor: 'rgba(0,0,0,.6)' 
+		display: 'block',margin: 'auto auto', 
+		backgroundColor: 'rgba(0,0,0,0.0)' 
 	}
 
   return styleVal;

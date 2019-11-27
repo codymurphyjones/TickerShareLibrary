@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {useSpring, animated } from 'react-spring'
 import useStyles from './styles';
 import useWindow from '../hooks/usewindow';
-import { Image } from '../Image';
+//import { Image } from '../Image';
 
 import fetch, {
     Response
@@ -65,12 +65,7 @@ Determines whether to show the entry form or the thank you text
 
 function FetchLoading({loading}: LoadingAnimationProps) {
 	const [resetOrbit, setResetOrbit] = useState(false);
-	
-	let animationData = {	}
-	
-	if(loading) {
-		animationData = {opacity: 1, from: {opacity: 0}}
-	}
+	const animationData = {opacity: loading ? 0 : 1};
 	
 	const props = useSpring(animationData)
 	const rotate = useSpring({
@@ -144,7 +139,7 @@ export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: Email
 					/>
 					<FetchLoading loading={isLoading} />
 				</div>
-				<GetEarlyAccessButton sent={formSent} textboxPlaceholder="Sign up now" />
+				<GetEarlyAccessButton sent={formSent} textboxPlaceholder="Get early access" />
 				
 			</>
 		);
@@ -152,7 +147,6 @@ export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: Email
 
 	return (
 		<span style={{fontSize: '18px', color: '#fff'}}>
-			<Image src="/assets/tickershare_transparent.png" maxwidth="64px" margin="auto auto 20px auto" />
 			<br />
 			<button type="submit" onClick={(e) => { e.preventDefault();}} style={useStyles.showContentSubmit(windowWidth)}>
 				<IoIosCheckmarkCircleOutline style={{display: "inline-block", verticalAlign: 'middle' }} size="2em" /> 
@@ -172,7 +166,7 @@ export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EarlyAccessButto
 	var isInViewport = function (elem: HTMLElement) {
 		var bounding = elem.getBoundingClientRect();
 		return (
-			bounding.top >= -175 &&
+			bounding.top >= -300 &&
 			bounding.left >= 0 &&
 			bounding.bottom + 200 <= (window.innerHeight || document.documentElement.clientHeight) &&
 			bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
