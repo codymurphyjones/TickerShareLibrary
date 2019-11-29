@@ -202,7 +202,7 @@ export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EarlyAccessButto
 		return (
 			<div 
 			style={useStyles.earlyAccessFrame(showButton, windowWidth)} >
-				<a style={useStyles.earlyAccessButton()} 
+				<a style={useStyles.earlyAccessButton(windowWidth)} 
 					href="#signup">
 						{textboxPlaceholder}
 				</a>

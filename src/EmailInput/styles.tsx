@@ -11,17 +11,22 @@ const useStyles = {
 	showLoadingIcon: showLoadingIcon
 }
 
-function StyleResize(windowWidth: number): string {
+let small = 360;
+let medium = 720;
+let large = 1280;
+
+function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:string): string {
+
+	if(windowWidth <= large)
+		return lg; //'800px';
 	
-	let mySize:string = '800px';
+	if(windowWidth <= medium)
+		return md;//"550px";
 	
-	if(windowWidth <= 720)
-		mySize = "550px";
+	if(windowWidth < small )
+		return sm;//"100%";
 	
-	if(windowWidth < 400 )
-		mySize = "100%";
-	
-	return mySize;
+	return def;
 }
 
     
@@ -51,7 +56,7 @@ function showContentFrame(windowWidth: number) {
   let styleVal: React.CSSProperties = {
 				display: (windowWidth >= 720) ? 'flex' : 'block',
 				justifyContent: 'space-around',
-				maxWidth: StyleResize(windowWidth),
+				maxWidth: StyleResize(windowWidth,"100%", "550px", "800px", "800px"),
 				margin: 'auto'}
 
   return styleVal;
@@ -80,15 +85,14 @@ function showContentSubmit(windowWidth: number) {
 					margin: (windowWidth > 680) ? '10px 0px 2px 0px' : '0px',
 					borderRadius: '10px',
 					padding: '10px 10px',
-					backgroundColor: '#000',
+					backgroundColor: '#44bbff',
 					border: '2px solid #44bbff',
-					color: '#bbbbbb',
+					color: '#FFF',
 					width: '100%',
 					maxWidth: '200px',
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica',
 					textAlign: 'center'
-					
 				}
   return styleVal;
 }
@@ -109,12 +113,12 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
   return styleVal;
 }
 
-function earlyAccessButton() {
+function earlyAccessButton(windowWidth: number) {
   
   let styleVal: React.CSSProperties = {
-						backgroundColor: '#000',
+						backgroundColor: '#44bbff',
 						border: '2px solid #44bbff',
-						color: '#bbbbbb',
+						color: '#FFF',
 						borderRadius: '12px',
 						padding: '10px 10px',
 						width: '100%',
@@ -122,7 +126,7 @@ function earlyAccessButton() {
 						marginTop: '25px',
 						fontWeight: 'bold',
 						display: 'inline-block',
-						fontSize: '14px',
+						fontSize: (windowWidth > 500) ? '14px' : '2vw',
 						textDecoration: 'none',
 						textAlign: 'center',
 						fontFamily: 'Helvetica'
