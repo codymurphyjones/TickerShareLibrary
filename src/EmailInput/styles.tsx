@@ -88,7 +88,7 @@ function showContentSubmit(windowWidth: number) {
 					backgroundColor: '#1199EE',
 					border: '2px solid #1199EE',
 					color: '#FFF',
-					width: '63%',
+					width: '64%',
 					maxWidth: StyleResize(windowWidth, '100%','200px','200px', '100%'),
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica Neue',
