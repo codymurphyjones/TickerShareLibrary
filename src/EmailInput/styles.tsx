@@ -73,6 +73,7 @@ function showContentTextBox() {
 						width: '60%',
 						maxWidth: '500px',
 						marginTop: '10px',
+						fontSize: "18px",
 						fontFamily: 'Helvetica Neue',
 						height: '35px'
 					}
