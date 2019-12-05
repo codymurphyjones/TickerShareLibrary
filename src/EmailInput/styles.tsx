@@ -56,7 +56,7 @@ function showContentFrame(windowWidth: number) {
   let styleVal: React.CSSProperties = {
 				display: (windowWidth >= 720) ? 'flex' : 'block',
 				justifyContent: 'space-around',
-				maxWidth: StyleResize(windowWidth,"100%", "800px", "1000px", "800px"),
+				maxWidth: StyleResize(windowWidth,"100%", "800px", "800px", "800px"),
 				margin: 'auto'}
 
   return styleVal;
