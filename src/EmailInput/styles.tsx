@@ -73,7 +73,8 @@ function showContentTextBox() {
 						width: '60%',
 						maxWidth: '500px',
 						marginTop: '10px',
-						fontFamily: 'Helvetica Neue'
+						fontFamily: 'Helvetica Neue',
+						height: '35px'
 					}
 
   return styleVal;
@@ -92,7 +93,8 @@ function showContentSubmit(windowWidth: number) {
 					maxWidth: StyleResize(windowWidth, '100%','200px','200px', '100%'),
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica Neue',
-					textAlign: 'center'
+					textAlign: 'center',
+					height: '35px'
 				}
   return styleVal;
 }
