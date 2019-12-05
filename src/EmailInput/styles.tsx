@@ -75,7 +75,7 @@ function showContentTextBox(windowWidth: number) {
 						marginTop: '10px',
 						fontSize: "18px",
 						fontFamily: 'Helvetica Neue',
-						height: StyleResize(windowWidth, '25px', '35px', '35px', '35px')
+						height: StyleResize(windowWidth, '25px', '30px', '35px', '35px')
 					}
 
   return styleVal;
@@ -110,7 +110,7 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 				fontWeight: 'bold',
 				position: 'fixed',
 				top: '-15px',
-				right: StyleResize(windowWidth, '4%','12%','12%', '12%'),
+				right: StyleResize(windowWidth, '4%','4%','12%', '12%'),
 				visibility: showButton ? "visible" : "hidden"
 			}
 
