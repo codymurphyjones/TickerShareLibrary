@@ -54,7 +54,7 @@ function Home(props) {
 				<TextStyleBlock size="22px" color="#f6ac3e"bold>With AI we ensure Tickershare remains a community where people use their real identities. <br />
 				We require everyone to provide their full name so you can always know who you're connecting with.
 				</TextStyleBlock>
-				<Image src="/assets/uGIqYVXgxB8v1h2P4fLgyLd5k.png" maxwidth="30%" maxMobileWidth="50%" maxMobile />
+				<Image src="/assets/uGIqYVXgxB8v1h2P4fLgyLd5k.png" maxwidth="25%" maxMobileWidth="50%" maxMobile />
 			</SectionBlock>
 			
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px" color={SectionBlockColors.Royal}>
