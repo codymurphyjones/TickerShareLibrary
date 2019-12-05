@@ -62,7 +62,7 @@ function showContentFrame(windowWidth: number) {
   return styleVal;
 }
 
-function showContentTextBox() {
+function showContentTextBox(windowWidth: number) {
 
   let styleVal: React.CSSProperties = {
 						backgroundColor: "#FFF",

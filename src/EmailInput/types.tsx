@@ -117,7 +117,7 @@ export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: Email
 				<div style={useStyles.showContentFrame(windowWidth)}>
 					<input className="inputbox"
 						name="email" type="textbox"
-						style={useStyles.showContentTextBox()}
+						style={useStyles.showContentTextBox(windowWidth)}
 						placeholder={textboxPlaceholder}
 						value={email}
 						onChange={handleInputChange}
