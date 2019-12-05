@@ -94,6 +94,7 @@ function showContentSubmit(windowWidth: number) {
 					maxWidth: StyleResize(windowWidth, '100%','200px','200px', '100%'),
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica Neue',
+					fontSize: "18px",
 					textAlign: 'center'
 				}
   return styleVal;
@@ -128,7 +129,7 @@ function earlyAccessButton(windowWidth: number) {
 						marginTop: '25px',
 						fontWeight: 'bold',
 						display: 'inline-block',
-						fontSize: (windowWidth > 500) ? '14px' : '2.5vw',
+						fontSize: (windowWidth > 500) ? '12px' : '2.5vw',
 						textDecoration: 'none',
 						textAlign: 'center',
 						fontFamily: 'Helvetica Neue'
