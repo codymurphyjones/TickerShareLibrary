@@ -35,7 +35,7 @@ function Home(props) {
 				
 			</SectionBlock>
 			
-			<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
+			<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px">
 				<a style={{top: '-150px', position: 'relative'}} id="signup" />
 				
 				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="0px 0px 0px 0px" bold>
@@ -59,7 +59,7 @@ function Home(props) {
 			
 			<SectionBlock padding="60px 10%" paddingsm="40px 10px 40px 10px" color={SectionBlockColors.Royal}>
 				<TextStyleBlock size="32px" bold>Express yourself. Be an influencer.</TextStyleBlock>
-				<TextStyleBlock size="22px" color="#f6ac3e" bold>Tickershare is a real social network, express your opinion on tickers and the market, have an opportunity to build an audience and grow a following</TextStyleBlock>
+				<TextStyleBlock size="22px" color="#f6ac3e" bold>Tickershare is a real social network, express your opinion on tickers and the market, have an opportunity to build an audience and grow a following.</TextStyleBlock>
 			</SectionBlock>
 
 			<SectionBlock padding="60px 10% 0px 10%" paddingsm="40px 10px 0px 10px" color={SectionBlockColors.White}>
@@ -74,7 +74,7 @@ function Home(props) {
 				<TextStyleBlock margin="10px 0px" color="#f6ac3e" size="22px" bold>
 				We took a design first apporach and with a lot of love,<br />
 				we believe it's one of the best looking social media apps.</TextStyleBlock>
-				<Image src="/assets/AzZ2r7i8nJO2CT8KTJu9361gj0.png" maxwidth="50%" maxMobile />
+				<Image src="/assets/finalImage.png" maxwidth="50%" maxMobile />
 			</SectionBlock>
 
 			{/*<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>

@@ -17,13 +17,13 @@ let large = 1280;
 
 function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:string): string {
 
-	if(windowWidth <= large)
+	if(windowWidth >= large)
 		return lg; //'800px';
 	
-	if(windowWidth <= medium)
+	if(windowWidth > medium && windowWidth < large)
 		return md;//"550px";
 	
-	if(windowWidth < small )
+	if(windowWidth <= small )
 		return sm;//"100%";
 	
 	return def;
@@ -56,7 +56,7 @@ function showContentFrame(windowWidth: number) {
   let styleVal: React.CSSProperties = {
 				display: (windowWidth >= 720) ? 'flex' : 'block',
 				justifyContent: 'space-around',
-				maxWidth: StyleResize(windowWidth,"100%", "550px", "800px", "800px"),
+				maxWidth: StyleResize(windowWidth,"100%", "800px", "1000px", "800px"),
 				margin: 'auto'}
 
   return styleVal;
@@ -73,7 +73,7 @@ function showContentTextBox() {
 						width: '60%',
 						maxWidth: '500px',
 						marginTop: '10px',
-						fontFamily: 'Helvetica'
+						fontFamily: 'Helvetica Neue'
 					}
 
   return styleVal;
@@ -85,13 +85,13 @@ function showContentSubmit(windowWidth: number) {
 					margin: (windowWidth > 680) ? '10px 0px 2px 0px' : '0px',
 					borderRadius: '10px',
 					padding: '10px 10px',
-					backgroundColor: '#44bbff',
-					border: '2px solid #44bbff',
+					backgroundColor: '#1199EE',
+					border: '2px solid #1199EE',
 					color: '#FFF',
-					width: '100%',
-					maxWidth: '200px',
+					width: '63%',
+					maxWidth: StyleResize(windowWidth, '100%','200px','200px', '100%'),
 					fontWeight: 'bold',
-					fontFamily: 'Helvetica',
+					fontFamily: 'Helvetica Neue',
 					textAlign: 'center'
 				}
   return styleVal;
@@ -105,7 +105,7 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 				maxWidth: (windowWidth > 500) ? '150px' : '100px',
 				fontWeight: 'bold',
 				position: 'fixed',
-				top: '10px',
+				top: '-15px',
 				right: '6%',
 				visibility: showButton ? "visible" : "hidden"
 			}
@@ -116,8 +116,8 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 function earlyAccessButton(windowWidth: number) {
   
   let styleVal: React.CSSProperties = {
-						backgroundColor: '#44bbff',
-						border: '2px solid #44bbff',
+						backgroundColor: '#1199EE',
+						border: '2px solid #1199EE',
 						color: '#FFF',
 						borderRadius: '12px',
 						padding: '10px 10px',
@@ -129,7 +129,7 @@ function earlyAccessButton(windowWidth: number) {
 						fontSize: (windowWidth > 500) ? '14px' : '2vw',
 						textDecoration: 'none',
 						textAlign: 'center',
-						fontFamily: 'Helvetica'
+						fontFamily: 'Helvetica Neue'
 
 					}
 
