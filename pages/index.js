@@ -5,6 +5,7 @@ import { SectionBlock, SectionBlockColors } from '../src/SectionBlock';
 import { Link } from '../src/Link';
 import { Footer } from '../src/Footer';
 import { EmailInput, GetEarlyAccessButton } from '../src/EmailInput';
+import Head from 'next/head'
 
 function OpenPrivacyPolicy() {
 
@@ -25,7 +26,11 @@ function OpenPrivacyPolicy() {
 
 function Home(props) {
 	
-  return <Content>
+  return <>
+  <Head>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/icon.png" />
+  </Head>
+  <Content>
 	  		
 			<SectionBlock padding="15px 10% 40px 10%" paddingsm="10px 0px 25px 0px">
 				<Image src="/assets/tickershare.png" maxwidth="48px" margin="auto auto 20px auto" />
@@ -106,6 +111,7 @@ function Home(props) {
 					
 			</Footer>
   </Content>
+  </>
 }
 
 export default Home

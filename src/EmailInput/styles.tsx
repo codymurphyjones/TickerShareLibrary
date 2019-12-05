@@ -109,7 +109,7 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 				fontWeight: 'bold',
 				position: 'fixed',
 				top: '-15px',
-				right: '12%',
+				right: StyleResize(windowWidth, '8%','12%','12%', '12%'),
 				visibility: showButton ? "visible" : "hidden"
 			}
 
