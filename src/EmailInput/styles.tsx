@@ -84,7 +84,7 @@ function showContentTextBox(windowWidth: number) {
 function showContentSubmit(windowWidth: number) {
 
   let styleVal: React.CSSProperties = {
-					margin: (windowWidth > 680) ? '10px 0px 2px 0px' : '0px',
+					margin: (windowWidth > 680) ? '10px 0px 2px 0px' : '10px 0px 2px 0px',
 					marginTop: "10px",
 					borderRadius: '10px',
 					padding: '15px 10px',
