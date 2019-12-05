@@ -20,7 +20,7 @@ function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:s
 	if(windowWidth >= large)
 		return lg; //'800px';
 	
-	if(windowWidth > medium && windowWidth < large)
+	if(windowWidth <= medium && windowWidth > small)
 		return md;//"550px";
 	
 	if(windowWidth <= small )
