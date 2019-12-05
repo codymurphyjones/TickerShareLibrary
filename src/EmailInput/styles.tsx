@@ -85,7 +85,7 @@ function showContentSubmit(windowWidth: number) {
   let styleVal: React.CSSProperties = {
 					margin: (windowWidth > 680) ? '10px 0px 2px 0px' : '0px',
 					borderRadius: '10px',
-					padding: '10px 10px',
+					padding: '15px 10px',
 					backgroundColor: '#1199EE',
 					border: '2px solid #1199EE',
 					color: '#FFF',
@@ -93,8 +93,7 @@ function showContentSubmit(windowWidth: number) {
 					maxWidth: StyleResize(windowWidth, '100%','200px','200px', '100%'),
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica Neue',
-					textAlign: 'center',
-					height: '35px'
+					textAlign: 'center'
 				}
   return styleVal;
 }
