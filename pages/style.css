@@ -22,3 +22,7 @@ body {
 	color: #8C8C8C;
 	text-decoration: underline;
 }
+
+input {
+-webkit-appearance:none;
+}

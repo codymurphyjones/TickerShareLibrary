@@ -106,7 +106,7 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 				fontWeight: 'bold',
 				position: 'fixed',
 				top: '-15px',
-				right: '6%',
+				right: '12%',
 				visibility: showButton ? "visible" : "hidden"
 			}
 
@@ -120,13 +120,13 @@ function earlyAccessButton(windowWidth: number) {
 						border: '2px solid #1199EE',
 						color: '#FFF',
 						borderRadius: '12px',
-						padding: '10px 10px',
+						padding: '10px 0px',
 						width: '100%',
-						maxWidth: '200px',
+						maxWidth: '120px',
 						marginTop: '25px',
 						fontWeight: 'bold',
 						display: 'inline-block',
-						fontSize: (windowWidth > 500) ? '14px' : '2vw',
+						fontSize: (windowWidth > 500) ? '14px' : '2.5vw',
 						textDecoration: 'none',
 						textAlign: 'center',
 						fontFamily: 'Helvetica Neue'
