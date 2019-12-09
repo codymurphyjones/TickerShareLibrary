@@ -17,13 +17,13 @@ let large = 992;
 
 function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:string): string {
 	if(windowWidth <= small )
-		return sm;//"100%";
+		return sm;
 
 	if(windowWidth > small && windowWidth <= medium)
-		return md;//"550px";
+		return md;
 
 	if(windowWidth >= large)
-		return lg; //'800px';
+		return lg; 
 
 	return def;
 }
@@ -53,9 +53,9 @@ function showLoadingIcon() {
 function showContentFrame(windowWidth: number) {
  
   let styleVal: React.CSSProperties = {
-				display: (windowWidth >= 720) ? 'flex' : 'block',
+				display: StyleResize(windowWidth,"block", "block", "block", "flex"),
 				justifyContent: 'space-around',
-				maxWidth: StyleResize(windowWidth,"100%", "100%", "800px", "800px"),
+				maxWidth: StyleResize(windowWidth,"100%", "100%", "600px", "800px"),
 				margin: 'auto'}
 
   return styleVal;
