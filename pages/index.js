@@ -5,22 +5,6 @@ import { SectionBlock, SectionBlockColors } from '../src/SectionBlock';
 import { Footer } from '../src/Footer';
 import { EmailInput, GetEarlyAccessButton } from '../src/EmailInput';
 import Head from 'next/head'
-
-
-
-import Analytics from 'analytics'
-import googleAnalytics from '@analytics/google-analytics'
- 
-/* Initialize analytics */
-const analytics = Analytics({
-  app: 'my-app-name',
-  version: 100,
-  plugins: [
-    googleAnalytics({
-      trackingId: 'UA-60738577-1',
-    })
-  ]
-})
  
 
 function OpenPrivacyPolicy() {
@@ -41,7 +25,6 @@ function OpenPrivacyPolicy() {
 
 
 function Home(props) {
-	analytics.page()
   return <>
   <Head>
 	  <title>TickerShare - A new way to connect with investors</title>

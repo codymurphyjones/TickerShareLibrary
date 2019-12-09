@@ -22,7 +22,7 @@ function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:s
 	if(windowWidth > small && windowWidth <= medium)
 		return md;
 
-	if(windowWidth > medium && windowWidth >= large)
+	if(windowWidth > medium && windowWidth <= large)
 		return lg; 
 
 	return def;
