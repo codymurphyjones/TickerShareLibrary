@@ -126,6 +126,7 @@ export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: Email
 					<input 
 						style={useStyles.showContentSubmit(windowWidth)}
 						value={CallToAction}
+						className="helvetica"
 						type="submit"
 						onClick={(e) => {	
 								setIsLoading(true);
@@ -148,9 +149,9 @@ export const ShowContent = ({ children, textboxPlaceholder, CallToAction}: Email
 	return (
 		<span style={{fontSize: '18px', color: '#fff'}}>
 			<br />
-			<button type="submit" onClick={(e) => { e.preventDefault();}} style={useStyles.showContentSubmit(windowWidth)}>
+			<button  className="helvetica"type="submit" onClick={(e) => { e.preventDefault();}} style={useStyles.showContentSubmit(windowWidth)}>
 				<IoIosCheckmarkCircleOutline style={{display: "inline-block", verticalAlign: 'middle' }} size="2em" /> 
-				<span style={{marginLeft: "5px"}}>Invite Requested</span>
+				<span style={{marginLeft: "5px", fontFamily: "Helvetica Neue"}}>Invite Requested</span>
 			</button><br />
 			<br />
 			You will receive an email when your invite is ready
@@ -200,9 +201,9 @@ export const GetEarlyAccessButton = ({sent,textboxPlaceholder}: EarlyAccessButto
 	  
 
 		return (
-			<div 
+			<div
 			style={useStyles.earlyAccessFrame(showButton, windowWidth)} >
-				<a style={useStyles.earlyAccessButton(windowWidth)} 
+				<a className="helvetica" style={useStyles.earlyAccessButton(windowWidth)} 
 					href="#signup">
 						{textboxPlaceholder}
 				</a>

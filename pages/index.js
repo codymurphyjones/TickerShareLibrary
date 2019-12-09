@@ -2,7 +2,6 @@ import { Content } from '../src/Content';
 import { Image } from '../src/Image';
 import { TextStyleBlock, TextStyleBlockAlign } from '../src/TextStyleBlock';
 import { SectionBlock, SectionBlockColors } from '../src/SectionBlock';
-import { Link } from '../src/Link';
 import { Footer } from '../src/Footer';
 import { EmailInput, GetEarlyAccessButton } from '../src/EmailInput';
 import Head from 'next/head'
@@ -82,21 +81,6 @@ function Home(props) {
 				we believe it's one of the best looking social media apps.</TextStyleBlock>
 				<Image src="/assets/finalImage.png" maxwidth="70%" maxMobile />
 			</SectionBlock>
-
-			{/*<SectionBlock padding="60px 0% 60px 0%" paddingsm="30px 0px 30px 0px" color={SectionBlockColors.Charcoal}>
-				<a id="signup" />
-				<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="0px 0px 0px 0px" bold>
-					<EmailInput sent={props.sent} action="https://usebasin.com/f/43a0ded73401" textboxPlaceholder="Get early access!">
-							<TextStyleBlock align={TextStyleBlockAlign.Middle} margin="0px auto" size="28px" bold>
-								Reserve your spot in the TickerShare Beta today!
-							</TextStyleBlock>
-							<TextStyleBlock align={TextStyleBlockAlign.Middle} size="22px" color="#55ccff" margin="25px 0px 0px 0px" bold>
-								Sign up for the beta to <br />secure your @handle<br />
-							</TextStyleBlock>
-					</EmailInput>
-				</TextStyleBlock>
-				
-				</SectionBlock>*/}
 
 			
 
