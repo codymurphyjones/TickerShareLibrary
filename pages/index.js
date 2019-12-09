@@ -28,6 +28,7 @@ function Home(props) {
 	
   return <>
   <Head>
+	  <title>TickerShare - A new way to connect with investors</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/icon.png" />
   </Head>
   <Content>
