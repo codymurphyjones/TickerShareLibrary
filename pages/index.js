@@ -17,7 +17,7 @@ const analytics = Analytics({
   version: 100,
   plugins: [
     googleAnalytics({
-      trackingId: 'UA-60738577',
+      trackingId: 'UA-60738577-1',
     })
   ]
 })
