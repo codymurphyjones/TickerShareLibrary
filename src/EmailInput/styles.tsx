@@ -11,21 +11,19 @@ const useStyles = {
 	showLoadingIcon: showLoadingIcon
 }
 
-let small = 360;
-let medium = 720;
-let large = 1280;
+let small = 576;
+let medium = 768;
+let large = 992;
 
 function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:string): string {
+	if(windowWidth <= small )
+		return sm;//"100%";
+
+	if(windowWidth > small && windowWidth <= medium)
+		return md;//"550px";
 
 	if(windowWidth >= large)
 		return lg; //'800px';
-	
-	if(windowWidth <= medium && windowWidth > small)
-		return md;//"550px";
-	
-	if(windowWidth <= small )
-		return sm;//"100%";
-	
 	return def;
 }
 
