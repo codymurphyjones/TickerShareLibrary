@@ -24,6 +24,7 @@ function StyleResize(windowWidth: number, sm:string, md:string, lg:string, def:s
 
 	if(windowWidth >= large)
 		return lg; //'800px';
+
 	return def;
 }
 
@@ -54,7 +55,7 @@ function showContentFrame(windowWidth: number) {
   let styleVal: React.CSSProperties = {
 				display: (windowWidth >= 720) ? 'flex' : 'block',
 				justifyContent: 'space-around',
-				maxWidth: StyleResize(windowWidth,"100%", "800px", "800px", "800px"),
+				maxWidth: StyleResize(windowWidth,"100%", "100%", "800px", "800px"),
 				margin: 'auto'}
 
   return styleVal;
@@ -90,7 +91,7 @@ function showContentSubmit(windowWidth: number) {
 					border: '2px solid #1199EE',
 					color: '#FFF',
 					width: '64%',
-					maxWidth: StyleResize(windowWidth, '100%','180px','200px', '100%'),
+					maxWidth: StyleResize(windowWidth, '100%','100%','180px', '200px'),
 					fontWeight: 'bold',
 					fontFamily: 'Helvetica Neue',
 					fontSize: "18px",
@@ -108,7 +109,7 @@ function earlyAccessFrame(showButton: boolean, windowWidth: number) {
 				fontWeight: 'bold',
 				position: 'fixed',
 				top: '-15px',
-				right: StyleResize(windowWidth, '4%','4%','12%', '12%'),
+				right: StyleResize(windowWidth, '4%','6%','12%', '12%'),
 				visibility: showButton ? "visible" : "hidden"
 			}
 
