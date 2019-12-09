@@ -6,6 +6,23 @@ import { Footer } from '../src/Footer';
 import { EmailInput, GetEarlyAccessButton } from '../src/EmailInput';
 import Head from 'next/head'
 
+
+
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+ 
+/* Initialize analytics */
+const analytics = Analytics({
+  app: 'my-app-name',
+  version: 100,
+  plugins: [
+    googleAnalytics({
+      trackingId: 'UA-60738577',
+    })
+  ]
+})
+ 
+
 function OpenPrivacyPolicy() {
 
 	var child = window.open('','popup','width=600,height=600');
@@ -24,7 +41,7 @@ function OpenPrivacyPolicy() {
 
 
 function Home(props) {
-	
+	analytics.page()
   return <>
   <Head>
 	  <title>TickerShare - A new way to connect with investors</title>

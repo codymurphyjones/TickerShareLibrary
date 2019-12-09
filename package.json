@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@analytics/google-analytics": "^0.2.2",
     "@types/node-fetch": "^2.5.4",
     "@zeit/next-css": "^1.0.1",
     "cors": "^2.8.5",
