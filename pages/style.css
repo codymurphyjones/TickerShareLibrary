@@ -9,6 +9,11 @@ body {
 	font-family: Helvetica neue;
 }
 
+button {
+    font-family : inherit;
+    font-size: 1em;
+}
+
 .footer a, .footer {
 	color: #8C8C8C;
 	text-decoration: none;
