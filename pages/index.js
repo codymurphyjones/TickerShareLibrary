@@ -77,7 +77,7 @@ function Home(props) {
 			
 				<TextStyleBlock size="32px" bold>Intuitive. Easy to  use.</TextStyleBlock>
 				<TextStyleBlock margin="10px 0px" color="#f6ac3e" size="22px" bold>
-				We took a design first apporach and with a lot of love,<br />
+				We took a design first approach and with a lot of love,<br />
 				we believe it's one of the best looking social media apps.</TextStyleBlock>
 				<Image src="/assets/finalImage.png" maxwidth="70%" maxMobile />
 			</SectionBlock>
