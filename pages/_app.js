@@ -1,5 +1,7 @@
 import React from 'react'
 import App from 'next/app'
+import Router from "next/router";
+import withGA from "next-ga";
 
 import "./style.css"
 
@@ -22,4 +24,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp
+export default withGA("UA-60738577-1", Router)(MyApp)
