@@ -12,6 +12,10 @@ app.prepare()
   server.options('*', cors()) 
   
   server.use(express.static('public'))
+  server.get('*/app', (req, res) => {
+	  res.redirect('https://tickersharewebapp.now.sh');
+    return null;
+  })
   
   server.get('*/:sent', (req, res) => {
     return app.render(req, res, '/', { sent: req.params.sent })
